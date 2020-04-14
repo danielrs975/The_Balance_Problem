@@ -1,0 +1,192 @@
+
+===========================================================
+Feedback - J Paul Gibson
+Date - 23/3/2020
+Student -  Daniel Rodriguez
+Version 1 - balance.py,  29/2/2020
+===========================================================
+
+1) Compiling/Building the executable code
+
+In this case your code is written in Python so it will be interpreted
+
+You need to provide instructions in how to install/execute this, and what version
+you used. (You can put this in a README file - see comment 2)
+
+For more complex projects it may also be
+a good idea to write a makefile (https://medium.com/@habibdhif/simple-makefile-to-automate-python-projects-e233af7681ad)
+In this case, you do not need one.
+
+--------------------------------------------
+
+
+2) README and license files
+
+It is also a good idea to include a README.txt (or README.md)
+which includes instructions for
+compiling and running the code as well as some administration details -
+
+---- "README.md"  example for your code ----
+
+# Project Title
+
+Ternary Balance problem -  source code file "balance.py"
+
+## Getting Started
+
+### Prerequisites
+
+The program is written in Python (version 3.8.2),
+downloaded from https://www.python.org/downloads/
+
+### Installing
+
+Follow the instructions at the web site.
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Unit tests
+
+Currently, there are no unit tests
+
+### Validation tests
+
+When you execute the program you can check that the answer is correct by checking the output on the screen, eg:
+
+
+```
+$ python3.8 balance.py
+14
+To weight 14 in right cup of balance, one needs to place the ternary weights in the left (L) and right (R) as follows:
+L : 27
+R : 9
+R : 3
+R : 1
+
+
+```
+
+## Built With
+
+```
+python3.8  --version
+Python 3.8.2
+
+```
+
+## Versioning
+
+Which versioning tool you use and where the version repository can be accessed
+
+Version 1 - blance.py - does not cleanly handle invalid inputs
+
+## Authors
+
+### Primary Author
+
+Daniel Rodriguez
+
+
+### Additional Contributions
+
+J Paul Gibson
+
+## License
+
+This project is licensed under the MIT License - see the license.txt file for details
+
+## Acknowledgments
+
+Thank you to ...
+
+--------------------------------------------
+3) Unit tests
+
+Currently there is no automated test code for your application.
+In order to test the application you need to run it and check manually that it displays the correct result on the terminal screen.
+
+In general, you should automate the test process when possible.
+You should also test each of the 'unit' parts of your system separately.
+In this case, you should test the following functions separately-
+result_sum_two_digits,
+ternary_sum
+balance_number
+base_10_to_base_3
+balance_the_weight
+
+------------------------------------------
+
+4) Code documentation
+
+The code is very well documented.
+
+A few things would improve the maintainabilty/understandabilty -
+
+explain the array sum_base
+
+better document the algorithm in ternary_sum to explain the use of sum_base
+
+in base_10_to_base_3 explain what is meant when you say that "base 3 is unbalanced"
+
+------------------------------------------------
+
+5) Valid inputs
+
+For what input strings does your code function correctly?
+Only integers
+
+Does you code provide a nice user interface when non valid inputs are given?
+Yes
+
+What does your code do with non valid inputs -
+a) integer numbers out of range?
+b) reals
+c) strings which are not numeric?
+
+Print an error that says that the user must put integers
+
+
+--------------------------------------------------
+
+6) Code structure and 'readability'
+
+The code is well structured and easy to understand
+You just need to comment/document how the masks algorithm works
+
+
+---------------------------------------------------
+
+7) Correctness
+
+Your code appears to be correct for all positive integers.
+Do you have an idea of what the maximum value it will work for?
+I think the algorithm can work for really big numbers because python doesn't have
+restrictions for the size of the integers. This is because python can store really big numbers
+automatically.
+
+Using string representation overcomes integer arithmetic limits.
+
+
+------------------------------------------------------
+
+8) Interface Design
+
+It would be good to display some text as output to the screen so that when you run the 
+program you know that you have to input an integer.
+
+It would be nice if the input was robust so that we don't get strange error messages like:
+
+ python3.8 balance.py
+12.6
+Traceback (most recent call last):
+  File "balance.py", line 132, in <module>
+    number = int(input())
+ValueError: invalid literal for int() with base 10: '12.6'
+DanielRofrdiguez-Problem1Feedback $ python3.8 balance.py
+12aaaa
+Traceback (most recent call last):
+  File "balance.py", line 132, in <module>
+    number = int(input())
+ValueError: invalid literal for int() with base 10: '12aaaa'
